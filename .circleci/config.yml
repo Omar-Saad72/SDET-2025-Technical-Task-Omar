@@ -49,21 +49,9 @@ jobs:
           command: |
             cd task4-mock-user-auth/
             npm -y init
-            npm install supertest mock-user-auth
+            npm install concurrently supertest mock-user-auth
             npm pkg set scripts.dev="nodemon ./node_modules/mock-user-auth/bin/www.js"
-            npm run dev &
-
-      - run:
-          name: "Run API Tests"
-          command: |
-            cd task4-mock-user-auth/
-            sleep 10 # give API a moment to start
-            npx jest || true
-
-      - run:
-          name: "Stop API server"
-          command: |
-            pkill -f "mock-user-auth/bin/www.js" || true
+            npm pkg set scripts.start-and-test="concurrently --kill-others \"npm run dev\" \"npx jest\""
 
 workflows:
   build_and_test:
