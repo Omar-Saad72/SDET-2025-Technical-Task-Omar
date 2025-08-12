@@ -45,13 +45,14 @@ jobs:
 
       # Run API tests for mock-user-auth
       - run:
-          name: "Setup API tests for mock-user-auth"
+          name: "Setup amd run API tests for mock-user-auth"
           command: |
             cd task4-mock-user-auth/
             npm -y init
             npm install concurrently supertest mock-user-auth
             npm pkg set scripts.dev="nodemon ./node_modules/mock-user-auth/bin/www.js"
             npm pkg set scripts.start-and-test="concurrently --kill-others \"npm run dev\" \"npx jest\""
+            npm run start-and-test
 
 workflows:
   build_and_test:

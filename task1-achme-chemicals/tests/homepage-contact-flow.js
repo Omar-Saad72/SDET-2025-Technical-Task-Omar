@@ -10,7 +10,7 @@ module.exports = {
         // Open the page and verify page loaded
         .url(homepageUrl)
         .waitForElementVisible('body', 5000)
-        .waitForElementVisible(flashMessage,40000)
+        .waitForElementVisible(flashMessage,10000)
         //Navigate to Contact and assert contact page loaded
         .waitForElementVisible(contactButton, 10000)
         .click(contactButton)
