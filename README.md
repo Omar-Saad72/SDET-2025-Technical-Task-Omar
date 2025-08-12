@@ -36,7 +36,8 @@ Before running any task, make sure you have:
 ## 1️⃣ Task 1 – Acme Chemicals - Web Automation with Nightwatch
 
 **Description:**  
-<img width="1179" height="428" alt="image" src="https://github.com/user-attachments/assets/a049b742-a76e-4cbf-b338-cd91907ec01d" />
+
+<img width="1170" height="416" alt="image" src="https://github.com/user-attachments/assets/421270cf-d8c0-43aa-a2bf-9774b8fc0dbc" />
 
 
 ### Installation
@@ -61,7 +62,8 @@ npx nightwatch tests/exampleTest.js
 ## 2️⃣ Task 2 – LinkedIn Registration Page - Web Automation with Nightwatch
 
 **Description:**  
-<img width="1244" height="549" alt="image" src="https://github.com/user-attachments/assets/47fa7349-1d52-4bf5-80cf-33191fb88f7e" />
+
+<img width="1076" height="490" alt="image" src="https://github.com/user-attachments/assets/e7c4b0d3-abee-4d93-b23b-4bccf07792c4" />
 
 
 ### Installation
@@ -85,7 +87,8 @@ npx nightwatch tests/exampleTest.js
 ## 3️⃣ My Store Search Page - Web Automation with Nightwatch
 
 **Description:**  
-<img width="971" height="425" alt="image" src="https://github.com/user-attachments/assets/892e8e8c-36e3-41b0-b9fd-8df0a6c90452" />
+
+<img width="838" height="383" alt="image" src="https://github.com/user-attachments/assets/40d42c4b-8f65-4784-8e20-b580cc48eff6" />
 
 
 ### Installation
@@ -109,7 +112,9 @@ npx nightwatch tests/exampleTest.js
 ## 4️⃣ Task 4 – Mock User Auth API - API Testing with SuperTest
 
 **Description:**  
-<img width="1074" height="759" alt="image" src="https://github.com/user-attachments/assets/79da5677-aa94-4ca3-ba7a-8b8cb8a9fb16" />
+
+<img width="939" height="682" alt="image" src="https://github.com/user-attachments/assets/07d97483-66be-4efd-9142-2d6a04e225d3" />
+
 
 ### Installation
 ```bash
