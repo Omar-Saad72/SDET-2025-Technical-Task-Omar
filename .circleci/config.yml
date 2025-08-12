@@ -52,19 +52,18 @@ jobs:
             npm install supertest mock-user-auth
             npm pkg set scripts.dev="nodemon ./node_modules/mock-user-auth/bin/www.js"
             npm run dev &
-            echo $! > server.pid   # save the background process ID
 
       - run:
           name: "Run API Tests"
           command: |
             cd task4-mock-user-auth/
             sleep 5 # give API a moment to start
-            npx nighwatch || true
+            npx jest || true
 
       - run:
           name: "Stop API server"
           command: |
-            kill $(cat task4-mock-user-auth/server.pid)
+            pkill -f "mock-user-auth/bin/www.js" || true
 
 workflows:
   build_and_test:
