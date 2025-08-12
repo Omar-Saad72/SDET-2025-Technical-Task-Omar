@@ -52,13 +52,12 @@ jobs:
             npm install supertest mock-user-auth
             npm pkg set scripts.dev="nodemon ./node_modules/mock-user-auth/bin/www.js"
             npm run dev &
-            npx wait-on http://127.0.0.1:3000/api/v1/users
 
       - run:
           name: "Run API Tests"
           command: |
             cd task4-mock-user-auth/
-            sleep 5 # give API a moment to start
+            sleep 10 # give API a moment to start
             npx jest || true
 
       - run:
