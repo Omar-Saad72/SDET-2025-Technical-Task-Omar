@@ -12,7 +12,7 @@ jobs:
 
       # Run UI tests for achme-chemicals
       - run:
-          name: "Setup and run UI tests for folder1"
+          name: "Setup and run UI tests for achme-chemicals"
           command: |
             cd task1-achme-chemicals
             npm -y init
@@ -21,7 +21,7 @@ jobs:
 
       # Run UI tests for linkedin
       - run:
-          name: "Setup and run UI tests for folder2"
+          name: "Setup and run UI tests for linkedin"
           command: |
             cd task2-linkedin
             npm -y init
@@ -30,7 +30,7 @@ jobs:
 
       # Run UI tests for my-site
       - run:
-          name: "Setup and run UI tests for folder3"
+          name: "Setup and run UI tests for my-site"
           command: |
             cd task3-my-store
             npm -y init
@@ -45,19 +45,26 @@ jobs:
 
       # Run API tests for mock-user-auth
       - run:
-          name: "Setup API tests in folder4"
+          name: "Setup API tests for mock-user-auth"
           command: |
             cd task4-mock-user-auth/
             npm -y init
             npm install supertest mock-user-auth
             npm pkg set scripts.dev="nodemon ./node_modules/mock-user-auth/bin/www.js"
-            npm run dev
+            npm run dev &
+            echo $! > server.pid   # save the background process ID
 
       - run:
           name: "Run API Tests"
           command: |
             cd task4-mock-user-auth/
+            sleep 5 # give API a moment to start
             npx nighwatch || true
+
+      - run:
+          name: "Stop API server"
+          command: |
+            kill $(cat task4-mock-user-auth/server.pid)
 
 workflows:
   build_and_test:
