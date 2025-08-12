@@ -40,21 +40,12 @@ Before running any task, make sure you have:
 <img width="1170" height="416" alt="image" src="https://github.com/user-attachments/assets/421270cf-d8c0-43aa-a2bf-9774b8fc0dbc" />
 
 
-### Installation
+### Installation & Running Tests
 ```bash
-cd task1-nightwatch
-npm init nightwatch
-
-```
-
-### Running Tests
-- Run all tests:
-```bash
+cd task1-achme-chemicals
+npm -y init
+npm install nightwatch
 npx nightwatch
-```
-- Run a specific test:
-```bash
-npx nightwatch tests/exampleTest.js
 ```
 
 ---
@@ -66,20 +57,12 @@ npx nightwatch tests/exampleTest.js
 <img width="1076" height="490" alt="image" src="https://github.com/user-attachments/assets/e7c4b0d3-abee-4d93-b23b-4bccf07792c4" />
 
 
-### Installation
+### Installation & Running Tests
 ```bash
-cd task2-nightwatch
-npm init nightwatch
-```
-
-### Running Tests
-- Run all tests:
-```bash
+cd task2-linkedin
+npm -y init
+npm install nightwatch
 npx nightwatch
-```
-- Run a specific test:
-```bash
-npx nightwatch tests/exampleTest.js
 ```
 
 ---
@@ -91,20 +74,12 @@ npx nightwatch tests/exampleTest.js
 <img width="838" height="383" alt="image" src="https://github.com/user-attachments/assets/40d42c4b-8f65-4784-8e20-b580cc48eff6" />
 
 
-### Installation
+### Installation & Running Tests
 ```bash
-cd task3-nightwatch
-npm init nightwatch
-```
-
-### Running Tests
-- Run all tests:
-```bash
+cd task3-my-store
+npm -y init
+npm install nightwatch
 npx nightwatch
-```
-- Run a specific test:
-```bash
-npx nightwatch tests/exampleTest.js
 ```
 
 ---
@@ -116,20 +91,14 @@ npx nightwatch tests/exampleTest.js
 <img width="939" height="682" alt="image" src="https://github.com/user-attachments/assets/07d97483-66be-4efd-9142-2d6a04e225d3" />
 
 
-### Installation
+### Installation & Running Tests
 ```bash
-cd task4-supertest
-npm install supertest --save-dev
-```
-
-### Running Tests
-- Run all tests (with npm script):
-```bash
-npm test
-```
-- Run tests with Jest directly:
-```bash
-npx jest
+cd task4-mock-user-auth/
+npm -y init
+npm install concurrently supertest mock-user-auth
+npm pkg set scripts.dev="nodemon ./node_modules/mock-user-auth/bin/www.js"
+npm pkg set scripts.start-and-test="concurrently --kill-others \"npm run dev\" \"npx jest\""
+npm run start-and-test
 ```
 
 ---
