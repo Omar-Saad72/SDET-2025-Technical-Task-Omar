@@ -134,6 +134,12 @@ npx jest
 
 ---
 
+## 📌 CircleCI Status Badge
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/PEZfmoqcLN5YUzb4dxY2Dd/5zTuuNCoLNF5a1DTasR23Z/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/PEZfmoqcLN5YUzb4dxY2Dd/5zTuuNCoLNF5a1DTasR23Z/tree/main)
+
+
+---
 ## 📝 Notes
 - Each task is **independent**. Install dependencies inside the task folder you want to run.
 - All tests are written in JavaScript.
