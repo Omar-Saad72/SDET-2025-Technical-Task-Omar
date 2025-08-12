@@ -32,7 +32,7 @@ jobs:
       - run:
           name: "Setup and run UI tests for folder3"
           command: |
-            cd task3-my-store/MyStore
+            cd task3-my-store
             npm -y init
             npm install nightwatch
             npx nightwatch || true
