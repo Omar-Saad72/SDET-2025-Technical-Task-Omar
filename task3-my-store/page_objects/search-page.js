@@ -10,8 +10,8 @@ module.exports = {
   commands: [{
     verifySearchResultsTitleAndCountAppears(searchItem) {
       return this
-        .waitForElementVisible('@searchResultsCount', 5000)
-        .waitForElementVisible('@searchResultsTitle', 5000)
+        .waitForElementVisible('@searchResultsCount', 10000)
+        .waitForElementVisible('@searchResultsTitle', 10000)
         .assert.textContains('@searchResultsTitle', searchItem);
 
     },

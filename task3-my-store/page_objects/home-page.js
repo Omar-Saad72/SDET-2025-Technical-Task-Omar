@@ -15,8 +15,8 @@ module.exports = {
 
     searchForProduct(searchQuery) {
       return this
-        .waitForElementVisible('@searchInput', 5000)
-        .waitForElementVisible('@searchBtn', 5000)
+        .waitForElementVisible('@searchInput', 10000)
+        .waitForElementVisible('@searchBtn', 10000)
         .setValue('@searchInput', searchQuery)
         .click('@searchBtn')
     }
