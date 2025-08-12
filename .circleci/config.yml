@@ -15,7 +15,7 @@ jobs:
           name: "Setup and run UI tests for folder1"
           command: |
             cd task1-achme-chemicals
-            npm install
+            npm -y init
             npm install nightwatch
             npx nighwatch
 
@@ -24,7 +24,7 @@ jobs:
           name: "Setup and run UI tests for folder2"
           command: |
             cd task2-linkedin
-            npm install
+            npm -y init
             npm install nightwatch
             npx nighwatch
 
@@ -33,7 +33,7 @@ jobs:
           name: "Setup and run UI tests for folder3"
           command: |
             cd task3-my-store/MyStore
-            npm install
+            npm -y init
             npm install nightwatch
             npx nighwatch
 
@@ -48,7 +48,7 @@ jobs:
           name: "Setup API tests in folder4"
           command: |
             cd task4-mock-user-auth/
-            npm install
+            npm -y init
             npm install supertest mock-user-auth
             npm pkg set scripts.dev="nodemon ./node_modules/mock-user-auth/bin/www.js"
             npm run dev
